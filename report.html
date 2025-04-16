@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>評価レポート</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+      color: #2c3e50;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      padding: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 4rem;
+      border-radius: 8px;
+    }
+    h1, h2, h3 {
+      color: #1f4e79;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .details {
+      display: none;
+      margin-top: 1rem;
+    }
+    .toggle-btn {
+      background-color: #1f4e79;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+  </style>
+  <script>
+    function toggleDetails(id) {
+      const detailSection = document.getElementById(id);
+      if (detailSection.style.display === 'none' || detailSection.style.display === '') {
+        detailSection.style.display = 'block';
+      } else {
+        detailSection.style.display = 'none';
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container fade-in">
+    <h1>評価レポート</h1>
+    <p><strong>作成者：</strong>LEE BEOMKI</p>
+    <p><strong>作成日：</strong>2025/04/14</p>
+
+    <section>
+      <h2>業績評価</h2>
+
+      <div>
+        <p><strong>期間：</strong>2025.03 - 2025.05</p>
+        <button class="toggle-btn" onclick="toggleDetails('details-1')">詳細を表示/非表示</button>
+        <div id="details-1" class="details">
+          <p>基盤係として、AIを用いたデータ分析ツールや業務効率化用ツールの開発を行っています。</p>
+          <h3>内容まとめ</h3>
+          <ul>
+            <li>RPAを利用したシステム自動化</li>
+              <p>①FS口コミ自動収集ツール設計・開発</p>
+              <p>②CK・CO交通費データ収集ツール改修(UI作成)</p>
+              <p>③Tableau用データ収集ツール改修(UI作成)</p>
+            <li>ChatWork&backlogタスク管理改善</li>
+              <p>①GoogleAppScript&ChatWorkAPI&backlog integrationを<br>使ったチーム別のタスク通知の振り分け</p>
+            <li>Geminiエンジンを使用したAIツールの開発
+              <p>①AI日報作成ツール設計・開発</p>
+              <p>②自動PPT作成ツール設計・開発</p>
+            </li>
+            <li>マシンラーニングを使用したツールの開発</li>
+              <p>①退職予測ツール設計(+決定木のロジック検証)</p>
+            <li>ツール資料作成</li>
+              <p>①Cursor</p>
+              <p>②SourceTree</p>
+              <p>③Pythonライブラリのコードサンプル(pandas, numpy, matplotlib)</p>
+              <p>④高級SQLのコードサンプル</p>
+          </ul>
+          <h3>反省点</h3>
+          <ul>
+            <p>全体的な知識不足により担当できる業務の範囲が狭い状態</p>
+            <li>技術知識不足(データエンジニアとして)</li>
+            <li>業務知識不足(部署で扱うのデータ構造など)</li>
+            <li>コミュニケーション不足</li>
+          </ul>
+          <h3>今後6ヶ月計画</h3>
+          <ul>
+            <li>房さんが作成したAIツールの運用ができるように知識をつける</li>
+            <li>課題を見つけてAIを用いたソリューションを出せるようになる</li>
+          </ul>
+        </div>
+      </div>
+<!-- 
+      <div>
+        <p><strong>期間：</strong>2024.10 - 2025.01</p>
+        <button class="toggle-btn" onclick="toggleDetails('details-2')">詳細を表示/非表示</button>
+        <div id="details-2" class="details">
+          <p>新しい社内BIツールの導入・教育・データ基盤の再設計を担当。</p>
+          <h3>内容まとめ</h3>
+          <ul>
+            <li>BIツール導入（Looker）</li>
+            <li>Redshiftを中心としたデータパイプライン構築</li>
+            <li>営業部門向けダッシュボード整備</li>
+          </ul>
+          <h3>反省点</h3>
+          <ul>
+            <li>ドキュメント整備が遅れた</li>
+            <li>要件定義の精度が不十分</li>
+          </ul>
+          <h3>今後6ヶ月計画</h3>
+          <ul>
+            <li>部門ごとのKPI標準化</li>
+            <li>レポート自動化率をさらに向上</li>
+          </ul>
+        </div>
+      </div> -->
+
+    </section>
+  </div>
+</body>
+</html>
